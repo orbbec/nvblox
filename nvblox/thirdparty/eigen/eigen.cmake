@@ -3,7 +3,8 @@ include(ExternalProject)
 ExternalProject_Add(
     ext_eigen
     PREFIX eigen
-    URL https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
+    GIT_REPOSITORY git@gitlab.com:libeigen/eigen.git
+    GIT_TAG 3.4.0
     UPDATE_COMMAND ""
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR>
 )
